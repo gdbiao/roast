@@ -17,4 +17,4 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/', 'Web/AppController@getApp')->middleware('auth');
+Route::get('/', 'Web\AppController@getApp')->middleware('auth');
