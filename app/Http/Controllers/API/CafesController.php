@@ -45,6 +45,7 @@ class CafesController extends Controller
      | Description:    Adds a new cafe to the application
     */
     public function postNewCafe(){
+        use Request;
         $cafe = new Cafe();
     
         $cafe->name = Request::get('name');
