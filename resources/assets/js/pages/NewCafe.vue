@@ -17,7 +17,7 @@
                         <label>地址
                             <input type="text" placeholder="地址" v-model="address">
                         </label>
-                        <span class="validation" v-show="!validations.address.is_valid">{{ validation.address.text }}</span>
+                        <span class="validation" v-show="!validations.address.is_valid">{{ validations.address.text }}</span>
                     </div>
                     <div class="large-12 medium-12 small-12 cell">
                         <label>城市
