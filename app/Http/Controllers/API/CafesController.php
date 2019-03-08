@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Cafe;
 use App\Http\Requests\StoreCafeRequest;
-
+use App\Http\Utilities\GaodeMaps
 
 class CafesController extends Controller
 {
