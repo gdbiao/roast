@@ -56811,7 +56811,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n", ""]);
+exports.push([module.i, "\n\n\n\n", ""]);
 
 // exports
 
@@ -56832,8 +56832,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+   components: {
+      CafeMap: CafeMap
+   }
+});
 
 /***/ }),
 /* 53 */
@@ -56843,7 +56856,18 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c("div", { attrs: { id: "cafes" } }, [
+    _c("div", { staticClass: "grid-x" }, [
+      _c(
+        "div",
+        { staticClass: "large-9 medium-9 small-12 cell" },
+        [_c("cafe-map")],
+        1
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "large-3 medium-3 small-12 cell" })
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -57191,7 +57215,7 @@ var render = function() {
                 ],
                 staticClass: "validation"
               },
-              [_vm._v(_vm._s(_vm.validation.address.text))]
+              [_vm._v(_vm._s(_vm.validations.address.text))]
             )
           ]),
           _vm._v(" "),
@@ -57311,8 +57335,8 @@ var render = function() {
                   {
                     name: "show",
                     rawName: "v-show",
-                    value: !_vm.validation.zip.is_valid,
-                    expression: "!validation.zip.is_valid"
+                    value: !_vm.validations.zip.is_valid,
+                    expression: "!validations.zip.is_valid"
                   }
                 ],
                 staticClass: "validation"
@@ -59891,6 +59915,7 @@ var cafes = {
  * Defines the API route we are using.
  */
 var api_url = '';
+var gaode_maps_js_api_key = '2cb116060897f77887039277c239f690';
 
 switch ("development") {
     case 'development':
@@ -59902,7 +59927,8 @@ switch ("development") {
 }
 
 var ROAST_CONFIG = {
-    API_URL: api_url
+    API_URL: api_url,
+    GAODE_MAPS_JS_API_KEY: gaode_maps_js_api_key
 };
 
 /***/ }),
