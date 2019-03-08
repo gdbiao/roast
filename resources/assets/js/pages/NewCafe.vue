@@ -35,7 +35,7 @@
                         <label>邮编
                             <input type="text" placeholder="邮编" v-model="zip">
                         </label>
-                        <span class="validation" v-show="!validation.zip.is_valid">{{ validations.zip.text }}</span>
+                        <span class="validation" v-show="!validations.zip.is_valid">{{ validations.zip.text }}</span>
                     </div>
                     <div class="large-12 medium-12 small-12 cell">
                         <a class="button" v-on:click="submitNewCafe()">提交</a>
