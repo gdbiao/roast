@@ -45,17 +45,20 @@ class CafesController extends Controller
      | Method:         POST
      | Description:    Adds a new cafe to the application
     */
-    public function postNewCafe(StoreCafeRequest $request){
-        $cafe = new Cafe();
-    
-        $cafe->name = $request->input('name');
-        $cafe->address = $request->input('address');
-        $cafe->city = $request->input('city');
-        $cafe->state = $request->input('state');
-        $cafe->zip = $request->input('zip');
-    
-        $cafe->save();
-    
-        return response()->json($cafe, 201);
-    }
+    public function postNewCafe(StoreCafeRequest $request)
+{
+    $cafe = new Cafe();
+
+    $cafe->name     = $request->input('name');
+    $cafe->address  = $request->input('address');
+    $cafe->city     = $request->input('city');
+    $cafe->state    = $request->input('state');
+    $cafe->zip      = $request->input('zip');
+    $coordinates = GaodeMaps::geocodeAddress($cafe->address, $cafe->city, $cafe->state);
+    $cafe->latitude = $coordinates['lat'];
+    $cafe->longitude = $coordinates['lng'];
+    $cafe->save();
+
+    return response()->json($cafe, 201);
+}
 }
