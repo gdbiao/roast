@@ -27,7 +27,7 @@ public static function geocodeAddress($address, $city, $state)
     $url = 'https://restapi.amap.com/v3/geocode/geo?address=' . $address . '&key=' . $apiKey;
 
     // 创建 Guzzle HTTP 客户端发起请求
-    $client = new Client();;
+    $client = new GuzzleHttp\Client();;
 
     // 发送请求并获取响应数据
     $geocodeResponse = $client->get($url)->getBody();
