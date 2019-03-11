@@ -18,8 +18,9 @@
 </template>
 
 <script>
-import CafeMap from '../components/cafes/CafeMap.vue';
+
   export default {
+      import CafeMap from '../components/cafes/CafeMap.vue';
      components: {
         CafeMap
     }
