@@ -95,7 +95,7 @@ clearMarkers() {
         this.markers[i].setMap(null);
     }
 }
-}
+},
 
 watch: {
     // 一旦 cafes 有更新立即重构地图点标记
