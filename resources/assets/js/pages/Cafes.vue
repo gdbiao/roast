@@ -1,4 +1,4 @@
-import CafeMap from '../components/cafes/CafeMap.vue';
+
 
 <style>
 
@@ -18,6 +18,7 @@ import CafeMap from '../components/cafes/CafeMap.vue';
 </template>
 
 <script>
+import CafeMap from '../components/cafes/CafeMap.vue';
   export default {
      components: {
         CafeMap
