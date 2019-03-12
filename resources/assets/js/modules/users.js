@@ -5,7 +5,7 @@
  | The Vuex data store for the users
  */
 
-import UserAPI from '../api/user.js';
+import UserAPI from '../api/users.js';
 
 export const users = {
     /*
